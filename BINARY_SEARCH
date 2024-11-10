@@ -1,0 +1,25 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+     public static void main(String[] args) {
+       int[] a={1,2,3,4,5,6,7,9,10};
+       int s=0;
+       int sear=7;
+       int l=a.length;
+       boolean f=false;
+       while(f!=true){
+           int c=(s+l)/2;
+           if(a[c]<sear){
+               s=c;
+           }
+           else if(a[c]==sear){
+               System.out.print("POSITION at :"+c);
+               f=true;
+               break;
+           }
+           else{
+               l=c-1;
+           }
+       }}
+    } 
