@@ -1,0 +1,25 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        int[] a = new int[10000];
+for (int i = 0; i < 10000; i++) {
+    a[i] = (int) (Math.random() * 10000);
+}
+        for(int i=1;i<a.length;i++){
+            if(a[i-1]>a[i]){
+                int s=a[i];
+                for (int j=i;a[j-1]>s;j--){
+                    
+                    int t=a[j];
+                    a[j]=a[j-1];
+                    a[j-1]=t;
+                    if(j-1==0){
+                        break;
+                    }
+                }
+            }
+        }
+        for (int i=0;i<a.length;i++){
+            System.out.print(a[i]);
+        }
+    }
+}
